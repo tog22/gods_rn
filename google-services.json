@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1080254725668",
+    "project_id": "react1---expogods",
+    "storage_bucket": "react1---expogods.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080254725668:android:62a0338e2bb2a491bda2b1",
+        "android_client_info": {
+          "package_name": "com.togapps.expogods"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080254725668-b52n7j8rav4tgi36vvlargdni6l6b11q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiiHHCNW-uNZo1OEqLVVVeaVYTEFvsavc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080254725668-b52n7j8rav4tgi36vvlargdni6l6b11q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

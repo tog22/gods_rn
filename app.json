@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "ExpoGods",
-    "slug": "ExpoGods",
+    "slug": "expogods",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8663e1d8-9c72-4f9f-8485-6f34cc91d5c2"
+      }
+    },
+    "owner": "tog22"
   }
 }
