@@ -1,10 +1,13 @@
 /////  External libraries  /////
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-export default function Home() {
+export default function Home({ navigation }) {
 	return (
 		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Home Screen</Text>
+			<Button
+				title="Play Online"
+				onPress={() => navigation.navigate('Play Online')}
+			/>
 		</View>
 	);
 }
