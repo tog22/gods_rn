@@ -1,10 +1,14 @@
 /////  External libraries  /////
 import { View, Text } from 'react-native';
 
-export default function Play_Online() {
+
+/////  Components  /////
+import Game_World from '../components/Game_World';
+
+export default function Pass_And_Play() {
 	return (
 		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Play Onlinedd</Text>
+			<Game_World></Game_World>
 		</View>
 	);
 }

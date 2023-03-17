@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 /////  Pages  /////
 import Home from './pages/Home' 
+import Pass_And_Play from './pages/Pass_And_Play'
 import Play_Online from './pages/Play_Online' 
 
 
@@ -17,6 +18,11 @@ export default function App() {
 	return (
 		<NavigationContainer>
 			<Stack.Navigator>
+				<Stack.Screen 
+					name="Pass & Play" 
+					component={Pass_And_Play} 
+					options={{ title: 'Path of the Gods' }}
+				/>
 				<Stack.Screen 
 					name="Home" 
 					component={Home} 
