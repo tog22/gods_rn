@@ -1,0 +1,11 @@
+.container {
+	background-color: rgb(44, 0, 95);
+	width: 100%;
+	height: 100%;
+  }
+  
+  .game_world {
+	  background-color: rgb(44, 0, 95);
+	  color: blue;
+	  font-weight: bold;
+	}

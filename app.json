@@ -31,6 +31,14 @@
         "projectId": "8663e1d8-9c72-4f9f-8485-6f34cc91d5c2"
       }
     },
-    "owner": "tog22"
+    "owner": "tog22",
+    /* custom additions by me */
+
+    /* ↓ based on https://blog.logrocket.com/css-modules-react-native/ */
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "css"]
+    }
+    
   }
 }
