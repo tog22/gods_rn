@@ -43,13 +43,31 @@ export default function App() {
 		https://medium.com/@arashfallahi1989/how-to-integrate-firebase-push-notification-in-react-native-expo-bd5cc694f181
 	*/
 	useEffect(() => {
-		const unsubscribe = messaging().onMessage(async remoteMessage=>{
-			Alert.alert('A new FCM message arrived!')
-			console.log(JSON.stringify(remoteMessage))
+		const on_foreground_message = messaging().onMessage(async remoteMessage=>{
+			
+			// Log it
+			lo('📨 Message received')
+			lo(JSON.stringify(remoteMessage))
+
+			// Process it
+			let msg_data = message.notification.data
+
+			switch (message.notification.title) {
+				case 'move':
+					// bus.emit('move', msg_data)
+					lo(msg_data)
+					break
+				default: { // {} to allow `let`
+					let alert_text = 'Unknown firebase message received: '+JSON.stringify(message.notification)
+					Alert.alert(alert_text)
+					break
+				}
+			}
+
 		});
-		return unsubscribe;
+		return on_foreground_message;
 	}, []);
-	
+
 }
 
 const styles = StyleSheet.create({
@@ -60,3 +78,20 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 	},
 });
+
+
+/**********************
+**  OTHER FUNCTIONS  **
+**********************/
+
+function fcm_string_to_object(string) {
+
+	string.replace('\"', '"')
+	let object = JSON.parse(string)
+	return object
+
+}
+
+let lo = function (to_log) {
+	console.log(to_log)
+}
