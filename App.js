@@ -44,12 +44,12 @@ export default function App() {
 	*/
 	useEffect(() => {
 		const unsubscribe = messaging().onMessage(async remoteMessage=>{
-		  Alert.alert('A new FCM message arrived!')
-		  console.log(JSON.stringify(remoteMessage))
+			Alert.alert('A new FCM message arrived!')
+			console.log(JSON.stringify(remoteMessage))
 		});
 		return unsubscribe;
-	   }, []);
-
+	}, []);
+	
 }
 
 const styles = StyleSheet.create({
