@@ -15,9 +15,23 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier":     "com.togapps.expogods",
+      "buildNumber":          "1.0.0",
+      /*
+      "googleServicesFile":   "./GoogleService-Info.plist",
+      "infoPlist": {
+         "UIBackgroundModes": [
+           "fetch",
+           "remote-notification"
+         ]
+      },
+      */
       "supportsTablet": true
     },
     "android": {
+      "package":              "com.togapps.expogods",
+      "versionCode":          1,
+      "googleServicesFile":   "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -38,7 +52,10 @@
     "packagerOpts": {
       "config": "metro.config.js",
       "sourceExts": ["js", "jsx", "css"]
-    }
+    },
+    "plugins": [
+      "@react-native-firebase/app"
+    ],
     
   }
 }

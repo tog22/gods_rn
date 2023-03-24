@@ -3,6 +3,8 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Alert } from 'react-native'
+import messaging from '@react-native-firebase/messaging'
 
 
 /////  Pages  /////
@@ -35,6 +37,19 @@ export default function App() {
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
+
+	/*
+	↓ Demo code from:
+		https://medium.com/@arashfallahi1989/how-to-integrate-firebase-push-notification-in-react-native-expo-bd5cc694f181
+	*/
+	useEffect(() => {
+		const unsubscribe = messaging().onMessage(async remoteMessage=>{
+		  Alert.alert('A new FCM message arrived!')
+		  console.log(JSON.stringify(remoteMessage))
+		});
+		return unsubscribe;
+	   }, []);
+
 }
 
 const styles = StyleSheet.create({
