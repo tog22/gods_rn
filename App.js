@@ -38,10 +38,18 @@ export default function App() {
 		</NavigationContainer>
 	);
 
+
+	/********************
+	**   🔥 FIREBASE   **
+	********************/
+
+
+
 	/*
 	↓ Demo code from:
 		https://medium.com/@arashfallahi1989/how-to-integrate-firebase-push-notification-in-react-native-expo-bd5cc694f181
 	*/
+	/*
 	useEffect(() => {
 		const on_foreground_message = messaging().onMessage(async remoteMessage=>{
 			
@@ -67,7 +75,8 @@ export default function App() {
 		});
 		return on_foreground_message;
 	}, []);
-
+	*/
+	
 }
 
 const styles = StyleSheet.create({
